@@ -17,52 +17,51 @@
 <body>
     <a class="skip-link" href="#main-content">Перейти до основного вмісту</a>
 
-    <header id="top" class="sticky top-0 z-50 bg-white border-b border-[#e8edf3]">
-        <div class="max-w-[1550px] mx-auto min-h-[75px] flex items-center justify-between">
-            <a
-                href="#top"
-                class="flex items-center pl-4 sm:pl-8 text-[15px] font-semibold text-[#111827] hover:text-[#0077b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#03a9fc] focus-visible:ring-offset-2 rounded-lg transition shrink-0"
-                aria-label="ONLYMATH-UA — на головну"
-            >
-                <img src="assets/icons/logo.svg" alt="Логотип ONLYMATH-UA" width="40" height="40" class="w-10 h-10 shrink-0">
-                <span class="whitespace-nowrap ml-2">ONLYMATH-UA</span>
+    <!-- Header with navigation and primary actions. -->
+    <header id="top" class="sticky top-0 z-50 bg-white border-b border-[#e8edf3] max-w-[1550px] mx-auto min-h-[75px] flex items-center justify-between">
+        <a
+            href="#top"
+            class="flex items-center pl-4 sm:pl-8 text-[15px] font-semibold text-[#111827] hover:text-[#0077b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#03a9fc] focus-visible:ring-offset-2 rounded-lg transition shrink-0"
+            aria-label="ONLYMATH-UA — на головну"
+        >
+            <img src="assets/icons/logo.svg" alt="Логотип ONLYMATH-UA" width="40" height="40" class="w-10 h-10 shrink-0">
+            <span class="whitespace-nowrap ml-2">ONLYMATH-UA</span>
+        </a>
+
+        <nav class="hidden lg:flex items-center justify-between lg:w-[30%] shrink-0 text-[15px] font-semibold text-[#111827]" aria-label="Головна навігація">
+            <a href="#directions" class="hover:text-[#0077b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#03a9fc] focus-visible:ring-offset-2 rounded-md transition whitespace-nowrap">Курси</a>
+            <a href="#about" class="hover:text-[#0077b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#03a9fc] focus-visible:ring-offset-2 rounded-md transition whitespace-nowrap">Про школу</a>
+            <a href="#contact" class="hover:text-[#0077b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#03a9fc] focus-visible:ring-offset-2 rounded-md transition whitespace-nowrap">Викладачі</a>
+            <a href="#contact" class="hover:text-[#0077b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#03a9fc] focus-visible:ring-offset-2 rounded-md transition whitespace-nowrap">Контакти</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-3 pr-4 sm:pr-8 shrink-0">
+            <a href="#directions"  class="min-h-[44px] px-4 py-2.5 rounded-xl text-[15px] font-semibold bg-white text-[#111827] border border-[#03a9fc] hover:bg-[#f0f8ff] transition w-full sm:w-auto">
+                Обрати напрямок навчання
             </a>
-
-            <nav class="hidden lg:flex items-center justify-between lg:w-[30%] shrink-0 text-[15px] font-semibold text-[#111827]" aria-label="Головна навігація">
-                <a href="#directions" class="hover:text-[#0077b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#03a9fc] focus-visible:ring-offset-2 rounded-md transition whitespace-nowrap">Курси</a>
-                <a href="#about" class="hover:text-[#0077b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#03a9fc] focus-visible:ring-offset-2 rounded-md transition whitespace-nowrap">Про школу</a>
-                <a href="#contact" class="hover:text-[#0077b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#03a9fc] focus-visible:ring-offset-2 rounded-md transition whitespace-nowrap">Викладачі</a>
-                <a href="#contact" class="hover:text-[#0077b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#03a9fc] focus-visible:ring-offset-2 rounded-md transition whitespace-nowrap">Контакти</a>
-            </nav>
-
-            <div class="hidden lg:flex items-center gap-3 pr-4 sm:pr-8 shrink-0">
-                <a href="#directions"  class="min-h-[44px] px-4 py-2.5 rounded-xl text-[15px] font-semibold bg-white text-[#111827] border border-[#03a9fc] hover:bg-[#f0f8ff] transition w-full sm:w-auto">
-                    Обрати напрямок навчання
-                </a>
-                <a href="#contact"  class="min-h-[44px] px-4 py-2.5 rounded-xl text-[15px] font-semibold bg-[#03a9fc] text-[#06243a] shadow-lg shadow-[#03a9fc]/10 hover:bg-[#00a0ed] hover:shadow-lg hover:shadow-[#03a9fc]/20 transition w-full sm:w-auto">
-                    Записатися на пробний урок
-                </a>
-            </div>
-
-            <details class="relative block lg:hidden mr-4 sm:mr-8 shrink-0">
-                <summary
-                    class="flex w-11 h-11 cursor-pointer list-none items-center justify-center rounded-2xl border border-[#e8edf3] bg-white transition hover:border-[#03a9fc] hover:bg-[#f0f8ff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#03a9fc] focus-visible:ring-offset-2 [&::-webkit-details-marker]:hidden"
-                    aria-label="Меню навігації"
-                >
-                    <span class="flex flex-col items-center justify-center gap-[4.5px]" aria-hidden="true">
-                        <span class="w-4 h-[2px] rounded-full bg-[#06243a]"></span>
-                        <span class="w-4 h-[2px] rounded-full bg-[#06243a]"></span>
-                        <span class="w-4 h-[2px] rounded-full bg-[#06243a]"></span>
-                    </span>
-                </summary>
-                <nav class="absolute right-0 top-full z-50 mt-2 flex min-w-52 flex-col gap-1 rounded-xl border border-[#e8edf3] bg-white p-2 text-sm font-semibold text-[#111827] shadow-lg" aria-label="Мобільна навігація">
-                    <a class="rounded-lg px-3 py-2 transition hover:bg-[#f0f8ff] hover:text-[#0077b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#03a9fc]" href="#directions">Курси</a>
-                    <a class="rounded-lg px-3 py-2 transition hover:bg-[#f0f8ff] hover:text-[#0077b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#03a9fc]" href="#about">Про школу</a>
-                    <a class="rounded-lg px-3 py-2 transition hover:bg-[#f0f8ff] hover:text-[#0077b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#03a9fc]" href="#contact">Викладачі та контакти</a>
-                    <a class="rounded-lg px-3 py-2 transition hover:bg-[#f0f8ff] hover:text-[#0077b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#03a9fc]" href="#contact">Записатися на урок</a>
-                </nav>
-            </details>
+            <a href="#contact"  class="min-h-[44px] px-4 py-2.5 rounded-xl text-[15px] font-semibold bg-[#03a9fc] text-[#06243a] shadow-lg shadow-[#03a9fc]/10 hover:bg-[#00a0ed] hover:shadow-lg hover:shadow-[#03a9fc]/20 transition w-full sm:w-auto">
+                Записатися на пробний урок
+            </a>
         </div>
+
+        <details class="relative block lg:hidden mr-4 sm:mr-8 shrink-0">
+            <summary
+                class="flex w-11 h-11 cursor-pointer list-none items-center justify-center rounded-2xl border border-[#e8edf3] bg-white transition hover:border-[#03a9fc] hover:bg-[#f0f8ff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#03a9fc] focus-visible:ring-offset-2 [&::-webkit-details-marker]:hidden"
+                aria-label="Меню навігації"
+            >
+                <span class="flex flex-col items-center justify-center gap-[4.5px]" aria-hidden="true">
+                    <span class="w-4 h-[2px] rounded-full bg-[#06243a]"></span>
+                    <span class="w-4 h-[2px] rounded-full bg-[#06243a]"></span>
+                    <span class="w-4 h-[2px] rounded-full bg-[#06243a]"></span>
+                </span>
+            </summary>
+            <nav class="absolute right-0 top-full z-50 mt-2 flex min-w-52 flex-col gap-1 rounded-xl border border-[#e8edf3] bg-white p-2 text-sm font-semibold text-[#111827] shadow-lg" aria-label="Мобільна навігація">
+                <a class="rounded-lg px-3 py-2 transition hover:bg-[#f0f8ff] hover:text-[#0077b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#03a9fc]" href="#directions">Курси</a>
+                <a class="rounded-lg px-3 py-2 transition hover:bg-[#f0f8ff] hover:text-[#0077b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#03a9fc]" href="#about">Про школу</a>
+                <a class="rounded-lg px-3 py-2 transition hover:bg-[#f0f8ff] hover:text-[#0077b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#03a9fc]" href="#contact">Викладачі та контакти</a>
+                <a class="rounded-lg px-3 py-2 transition hover:bg-[#f0f8ff] hover:text-[#0077b6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#03a9fc]" href="#contact">Записатися на урок</a>
+            </nav>
+        </details>
     </header>
 
     <main id="main-content">
