@@ -97,6 +97,19 @@ h1 span {
     padding-block: 60px;
 }
 
+main > section {
+    padding-block: 3rem;
+    padding-inline: max(1rem, calc((100% - 80rem) / 2));
+}
+
+main > section:nth-of-type(odd) {
+    background-color: var(--background-surface-color);
+}
+
+main > section:nth-of-type(even) {
+    background-color: var(--background-section-color);
+}
+
 .skip-link {
     position: absolute;
     z-index: 60;
@@ -164,10 +177,6 @@ h1 span {
     font-weight: 730;
     letter-spacing: -0.035em;
     line-height: 1.2;
-}
-
-.darker-background {
-    background: var(--background-section-color);
 }
 
 .hero-actions {
@@ -476,8 +485,17 @@ select {
     grid-column: 1 / -1;
 }
 
-#tariffs {
+.calculator-output {
+    width: 100%;
+    max-width: 1240px;
+    margin-inline: auto;
     padding-top: var(--spacing-large);
+}
+
+.calculator-output:not(.hidden) {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 .form-hint {
@@ -557,7 +575,7 @@ select {
     gap: var(--spacing-medium);
 }
 
-footer {
+body > footer {
     padding-block: 60px;
 }
 
@@ -657,5 +675,127 @@ footer {
     *::after {
         scroll-behavior: auto !important;
         transition-duration: 0.01ms !important;
+    }
+}
+
+#reviews .reviews-button-prev.swiper-button-prev,
+#reviews .reviews-button-next.swiper-button-next {
+    position: static;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin: 0;
+    transform: none;
+    color: var(--brand-accent-color);
+    background: var(--background-surface-color);
+    border: 1px solid var(--border-default-color);
+    border-radius: 50%;
+    box-shadow: var(--card-shadow);
+}
+
+#reviews .reviews-button-prev.swiper-button-prev:hover,
+#reviews .reviews-button-next.swiper-button-next:hover {
+    border-color: var(--brand-primary-color);
+    background: var(--brand-subtle-background);
+}
+
+#reviews .reviews-button-prev.swiper-button-prev::after,
+#reviews .reviews-button-next.swiper-button-next::after {
+    display: none;
+}
+
+#reviews.reviews-swiper.swiper {
+    --reviews-card-height: 32rem;
+    overflow: hidden;
+    padding-block: 3rem;
+    padding-inline: max(1.5rem, calc((100% - 80rem) / 2));
+    clip-path: inset(0 max(0px, calc((100% - 80rem) / 2 - 1.75rem)));
+}
+
+#reviews .swiper-slide {
+    height: var(--reviews-card-height);
+}
+
+@media (min-width: 360px) {
+    #reviews.reviews-swiper.swiper {
+        --reviews-card-height: 27rem;
+    }
+}
+
+@media (min-width: 390px) {
+    #reviews.reviews-swiper.swiper {
+        --reviews-card-height: 25rem;
+    }
+}
+
+@media (min-width: 430px) {
+    #reviews.reviews-swiper.swiper {
+        --reviews-card-height: 23rem;
+    }
+}
+
+@media (min-width: 640px) {
+    #reviews.reviews-swiper.swiper {
+        --reviews-card-height: 20rem;
+    }
+}
+
+@media (min-width: 768px) {
+    #reviews.reviews-swiper.swiper {
+        --reviews-card-height: 25.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    #reviews.reviews-swiper.swiper {
+        --reviews-card-height: 30rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    #reviews.reviews-swiper.swiper {
+        --reviews-card-height: 27rem;
+    }
+}
+
+@media (min-width: 1360px) {
+    #reviews.reviews-swiper.swiper {
+        --reviews-card-height: 25rem;
+    }
+}
+
+#reviews .reviews-pagination.swiper-pagination {
+    position: static;
+    width: auto;
+    margin: var(--spacing-large) auto;
+    transform: none;
+}
+
+#reviews .reviews-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 0 5px !important;
+    background: #bae6fd;
+    opacity: 1;
+    transition: width 220ms ease, background-color 220ms ease;
+}
+
+#reviews .reviews-pagination .swiper-pagination-bullet-active {
+    width: 24px;
+    border-radius: 999px;
+    background: #0ba8eb;
+}
+
+#reviews .reviews-pagination .swiper-pagination-bullet:focus-visible {
+    outline: 3px solid #bae6fd;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    #reviews .reviews-pagination .swiper-pagination-bullet {
+        transition: none;
     }
 }
