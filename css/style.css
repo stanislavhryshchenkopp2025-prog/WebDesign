@@ -5,6 +5,9 @@
     --brand-primary-color: #03a9fc;
     --brand-accent-color: #0077b6;
     --brand-subtle-background: #f0f8ff;
+    --input-focus-color: #38bdf8;
+    --input-error-color: #ef4444;
+    --input-success-color: #10b981;
     --border-default-color: #e8edf3;
     --background-surface-color: #fff;
     --background-section-color: #fbfcfe;
@@ -314,6 +317,57 @@ legend {
     color: var(--text-primary-color);
 }
 
+.field input:not([type="checkbox"]):not([type="radio"]) {
+    border-color: #d1d5db;
+    transition: border-color var(--transition-ui), background-color var(--transition-ui), box-shadow var(--transition-ui);
+}
+
+.field input:not([type="checkbox"]):not([type="radio"]):focus-visible {
+    border-color: var(--input-focus-color);
+    box-shadow: 0 0 0 3px rgb(56 189 248 / 25%);
+}
+
+.field input:not([type="checkbox"]):not([type="radio"]).error {
+    border: 1px solid var(--input-error-color);
+    background-color: #fef2f2;
+    box-shadow: none;
+}
+
+.field input:not([type="checkbox"]):not([type="radio"]).error:focus-visible {
+    border-color: var(--input-error-color);
+}
+
+.field input:not([type="checkbox"]):not([type="radio"]).success {
+    border: 1px solid var(--input-success-color);
+    background-color: #ecfdf5;
+    box-shadow: none;
+}
+
+.field input:not([type="checkbox"]):not([type="radio"]).success:focus-visible {
+    border-color: var(--input-success-color);
+}
+
+/* Перекриває синє тло, яке браузер додає до автоматично заповнених полів. */
+.field input:not([type="checkbox"]):not([type="radio"]):-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 1000px var(--background-surface-color);
+    -webkit-text-fill-color: var(--text-primary-color);
+}
+
+.field input:not([type="checkbox"]):not([type="radio"]).error:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 1000px #fef2f2;
+}
+
+.field input:not([type="checkbox"]):not([type="radio"]).success:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 1000px #ecfdf5;
+}
+
+.field-error {
+    margin: -2px 0 0;
+    color: var(--input-error-color);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
 .field select {
     height: 36px;
     padding-block: 0;
@@ -401,6 +455,25 @@ select {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-small);
+}
+
+.consent-field {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    column-gap: var(--spacing-small);
+    row-gap: 4px;
+    color: var(--text-primary-color);
+    font-size: var(--font-size-small);
+}
+
+.consent-field input {
+    margin-top: 4px;
+    accent-color: var(--brand-accent-color);
+}
+
+.consent-field .field-error {
+    grid-column: 1 / -1;
 }
 
 #tariffs {
