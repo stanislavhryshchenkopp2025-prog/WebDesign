@@ -763,6 +763,10 @@ body > footer {
     }
 }
 
+[data-aos="fade-up"] {
+    transform: translate3d(0, 40px, 0);
+}
+
 #reviews .reviews-pagination.swiper-pagination {
     position: static;
     width: auto;
