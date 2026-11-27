@@ -116,31 +116,27 @@
                 <div class="mt-8 sm:mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
                     <div class="min-w-0" data-aos="fade-up">
                         <p class="eyebrow">ONLYMATH промо</p>
-                        <div class="w-full overflow-hidden rounded-2xl">
-                            <iframe
-                                class="block w-full aspect-video"
-                                src="https://www.youtube-nocookie.com/embed/Nbwv5wHQoj0?si=mzK-KaILxV4bW2uC"
-                                title="Відео про ONLYMATH-UA"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allowfullscreen
-                                loading="lazy"
-                            ></iframe>
-                        </div>
+                        <iframe
+                            class="block w-full aspect-video overflow-hidden rounded-2xl"
+                            src="https://www.youtube-nocookie.com/embed/Nbwv5wHQoj0?si=mzK-KaILxV4bW2uC"
+                            title="Відео про ONLYMATH-UA"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                            loading="lazy"
+                        ></iframe>
                     </div>
                     <div class="min-w-0" data-aos="fade-up" data-aos-delay="150">
                         <p class="eyebrow">Ми на мапі</p>
-                        <div class="w-full overflow-hidden rounded-2xl">
-                            <iframe
-                                class="block w-full aspect-video border-0"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.32319896978!2d24.008805576059917!3d49.83638443138813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add790d2c8979%3A0x816b961499e08d49!2zTnUgIkzKuXZpdnPKuWthIFBvbGl0ZWtobmlrYSI!5e0!3m2!1sen!2sua!4v1793379708429!5m2!1sen!2sua"
-                                title="ONLYMATH-UA на Google Maps"
-                                allowfullscreen
-                                loading="lazy"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                            ></iframe>
-                        </div>
+                        <iframe
+                            class="block w-full aspect-video border-0 overflow-hidden rounded-2xl"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.32319896978!2d24.008805576059917!3d49.83638443138813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add790d2c8979%3A0x816b961499e08d49!2zTnUgIkzKuXZpdnPKuWthIFBvbGl0ZWtobmlrYSI!5e0!3m2!1sen!2sua!4v1793379708429!5m2!1sen!2sua"
+                            title="ONLYMATH-UA на Google Maps"
+                            allowfullscreen
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                        ></iframe>
                     </div>
                 </div>
             </section>
@@ -718,119 +714,116 @@
             </section>
 
             <!-- Заявка: контактні дані та навчальні параметри. -->
-            <section id="contact" aria-labelledby="contact-title">
-                <div class="partitioned-section contact-proportions">
-                    <div data-aos="fade-up">
-                        <p class="eyebrow">Почнімо разом</p>
-                        <h2 class="section-title" id="contact-title">Подати заявку</h2>
-                        <p>Залиште контакт — зв'яжемося з вами, визначимо потреби учня та допоможемо обрати напрям навчання.</p>
-                        <aside class="contact-note">
-                            <h3>Не знаєте, з чого почати?</h3>
-                            <p>Оберіть «Не знаю» — допоможемо визначити напрям і формат під час розмови. Пробний урок можна забронювати окремо.</p>
-                        </aside>
-                    </div>
-                    <form id="contact-form" class="form" action="#contact" method="get" novalidate data-aos="fade-up" data-aos-delay="150">
-                        <fieldset class="radio-field">
-                            <legend>Як заповнити дані про навчання?</legend>
-                            <label class="radio-button"><input type="radio" name="request-mode" value="manual" checked disabled> Ввести дані самостійно</label>
-                            <label class="radio-button"><input type="radio" name="request-mode" value="calculator" disabled> Підтягнути з калькулятора</label>
-                            <label class="radio-button"><input type="radio" name="request-mode" value="unsure" disabled> Не знаю</label>
-                        </fieldset>
-                        <p class="form-hint">* Обов'язкові поля. Бали НМТ — від 100 до 200.</p>
-                        <div class="field">
-                            <label for="name">Ваше ім'я</label>
-                            <input id="name" name="name" type="text" autocomplete="name" placeholder="Як до вас звертатися?" aria-invalid="false" required>
-                        </div>
-                        <div class="form-grid !grid-cols-1 min-[421px]:!grid-cols-2">
-                            <div class="field">
-                                <label for="contact-method">Спосіб зв'язку</label>
-                                <select id="contact-method" name="contact-method">
-                                    <option value="phone" selected disabled>Телефон</option>
-                                    <option value="telegram" disabled>Telegram</option>
-                                </select>
-                            </div>
-                            <div class="field">
-                                <label for="phone">Номер телефону</label>
-                                <input id="phone" name="phone" type="tel" value="+380" autocomplete="tel" aria-invalid="false" required>
-                            </div>
-                            <div class="field">
-                                <label for="contact-course">Напрям навчання</label>
-                                <select id="contact-course" name="contact-course">
-                                    <option disabled>Шкільна математика</option>
-                                    <option disabled selected>Підготовка до НМТ</option>
-                                    <option disabled>Профільна математика</option>
-                                    <option disabled>Олімпіадна математика</option>
-                                </select>
-                            </div>
-                            <div class="field">
-                                <label for="contact-grade">Клас</label>
-                                <select id="contact-grade" name="contact-grade">
-                                    <option>9 клас</option>
-                                    <option>10 клас</option>
-                                    <option selected>11 клас</option>
-                                </select>
-                            </div>
-                            <div class="field">
-                                <label for="contact-current-score">Поточний бал НМТ</label>
-                                <input id="contact-current-score" name="contact-current-score" type="number" min="100" max="200" placeholder="100–200" aria-invalid="false" required>
-                            </div>
-                            <div class="field">
-                                <label for="contact-target-score">Бажаний бал НМТ</label>
-                                <input id="contact-target-score" name="contact-target-score" type="number" min="100" max="200" placeholder="100–200" aria-invalid="false" required>
-                            </div>
-                            <div class="field">
-                                <label for="format">Формат занять</label>
-                                <select id="format" name="format">
-                                    <option value="">Оберіть формат</option>
-                                    <option>Група</option>
-                                    <option>Мінігрупа</option>
-                                    <option>Індивідуально</option>
-                                </select>
-                            </div>
-                            <div class="field">
-                                <label for="contact-duration">Тривалість навчання</label>
-                                <select id="contact-duration" name="contact-duration">
-                                    <option>1 місяць</option>
-                                    <option>3 місяці</option>
-                                    <option>6 місяців</option>
-                                </select>
-                            </div>
-                        </div>
-                        <fieldset class="radio-field applicant-field">
-                            <legend>Хто заповнює заявку?</legend>
-                            <label class="radio-button"><input type="radio" name="applicant" value="student" checked> Я учень</label>
-                            <label class="radio-button"><input type="radio" name="applicant" value="parent"> Я батько/мати</label>
-                        </fieldset>
-                        <div class="consent-field">
-                            <input id="personal-data-consent" name="personal-data-consent" type="checkbox" required aria-invalid="false">
-                            <label for="personal-data-consent">Надаю згоду на обробку персональних даних</label>
-                        </div>
-                        <button class="min-h-[44px] px-4 py-2.5 rounded-xl text-[15px] font-semibold bg-[#03a9fc] text-[#06243a] shadow-lg shadow-[#03a9fc]/10 hover:bg-[#00a0ed] hover:shadow-lg hover:shadow-[#03a9fc]/20 transition w-full sm:w-auto" type="submit">Подати заявку <i class="icon fa-solid fa-arrow-right" aria-hidden="true"></i></button>
-                        <p class="form-hint">Натискаючи «Подати заявку», ви погоджуєтесь із <a href="#contact">Політикою конфіденційності</a>.</p>
-                    </form>
+            <section id="contact" class="partitioned-section contact-proportions" aria-labelledby="contact-title">
+                <div data-aos="fade-up">
+                    <p class="eyebrow">Почнімо разом</p>
+                    <h2 class="section-title" id="contact-title">Подати заявку</h2>
+                    <p>Залиште контакт — зв'яжемося з вами, визначимо потреби учня та допоможемо обрати напрям навчання.</p>
+                    <aside class="contact-note">
+                        <h3>Не знаєте, з чого почати?</h3>
+                        <p>Оберіть «Не знаю» — допоможемо визначити напрям і формат під час розмови. Пробний урок можна забронювати окремо.</p>
+                    </aside>
                 </div>
+                <form id="contact-form" class="form" action="#contact" method="get" novalidate data-aos="fade-up" data-aos-delay="150">
+                    <fieldset class="radio-field">
+                        <legend>Як заповнити дані про навчання?</legend>
+                        <label class="radio-button"><input type="radio" name="request-mode" value="manual" checked disabled> Ввести дані самостійно</label>
+                        <label class="radio-button"><input type="radio" name="request-mode" value="calculator" disabled> Підтягнути з калькулятора</label>
+                        <label class="radio-button"><input type="radio" name="request-mode" value="unsure" disabled> Не знаю</label>
+                    </fieldset>
+                    <p class="form-hint">* Обов'язкові поля. Бали НМТ — від 100 до 200.</p>
+                    <div class="field">
+                        <label for="name">Ваше ім'я</label>
+                        <input id="name" name="name" type="text" autocomplete="name" placeholder="Як до вас звертатися?" aria-invalid="false" required>
+                    </div>
+                    <div class="form-grid !grid-cols-1 min-[421px]:!grid-cols-2">
+                        <div class="field">
+                            <label for="contact-method">Спосіб зв'язку</label>
+                            <select id="contact-method" name="contact-method">
+                                <option value="phone" selected disabled>Телефон</option>
+                                <option value="telegram" disabled>Telegram</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="phone">Номер телефону</label>
+                            <input id="phone" name="phone" type="tel" value="+380" autocomplete="tel" aria-invalid="false" required>
+                        </div>
+                        <div class="field">
+                            <label for="contact-course">Напрям навчання</label>
+                            <select id="contact-course" name="contact-course">
+                                <option disabled>Шкільна математика</option>
+                                <option disabled selected>Підготовка до НМТ</option>
+                                <option disabled>Профільна математика</option>
+                                <option disabled>Олімпіадна математика</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="contact-grade">Клас</label>
+                            <select id="contact-grade" name="contact-grade">
+                                <option>9 клас</option>
+                                <option>10 клас</option>
+                                <option selected>11 клас</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="contact-current-score">Поточний бал НМТ</label>
+                            <input id="contact-current-score" name="contact-current-score" type="number" min="100" max="200" placeholder="100–200" aria-invalid="false" required>
+                        </div>
+                        <div class="field">
+                            <label for="contact-target-score">Бажаний бал НМТ</label>
+                            <input id="contact-target-score" name="contact-target-score" type="number" min="100" max="200" placeholder="100–200" aria-invalid="false" required>
+                        </div>
+                        <div class="field">
+                            <label for="format">Формат занять</label>
+                            <select id="format" name="format">
+                                <option value="">Оберіть формат</option>
+                                <option>Група</option>
+                                <option>Мінігрупа</option>
+                                <option>Індивідуально</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="contact-duration">Тривалість навчання</label>
+                            <select id="contact-duration" name="contact-duration">
+                                <option>1 місяць</option>
+                                <option>3 місяці</option>
+                                <option>6 місяців</option>
+                            </select>
+                        </div>
+                    </div>
+                    <fieldset class="radio-field applicant-field">
+                        <legend>Хто заповнює заявку?</legend>
+                        <label class="radio-button"><input type="radio" name="applicant" value="student" checked> Я учень</label>
+                        <label class="radio-button"><input type="radio" name="applicant" value="parent"> Я батько/мати</label>
+                    </fieldset>
+                    <div class="consent-field">
+                        <input id="personal-data-consent" name="personal-data-consent" type="checkbox" required aria-invalid="false">
+                        <label for="personal-data-consent">Надаю згоду на обробку персональних даних</label>
+                    </div>
+                    <button class="min-h-[44px] px-4 py-2.5 rounded-xl text-[15px] font-semibold bg-[#03a9fc] text-[#06243a] shadow-lg shadow-[#03a9fc]/10 hover:bg-[#00a0ed] hover:shadow-lg hover:shadow-[#03a9fc]/20 transition w-full sm:w-auto" type="submit">Подати заявку <i class="icon fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                    <p class="form-hint">Натискаючи «Подати заявку», ви погоджуєтесь із <a href="#contact">Політикою конфіденційності</a>.</p>
+                </form>
+                <dialog
+                    id="success-dialog"
+                    aria-labelledby="success-title"
+                    aria-describedby="success-message"
+                    class="fixed inset-0 m-auto max-h-[calc(100vh-2rem)] w-[min(90%,32rem)] overflow-y-auto rounded-2xl border-0 bg-white p-6 text-[#111827] shadow-2xl backdrop:bg-black/60 sm:p-8"
+                >
+                    <h2 id="success-title" class="mb-3 text-2xl font-bold">Форму успішно перевірено</h2>
+                    <p id="success-message" class="mb-6 text-[#60718c]">
+                        Усі обов’язкові поля пройшли клієнтську валідацію. Дякуємо!
+                    </p>
+                    <button
+                        id="close-success-dialog"
+                        class="min-h-[44px] rounded-xl bg-[#03a9fc] px-5 py-2.5 font-semibold text-[#06243a] hover:bg-[#00a0ed] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0077b6] focus-visible:ring-offset-2"
+                        type="button"
+                        autofocus
+                    >
+                        Закрити
+                    </button>
+                </dialog>
             </section>
         </main>
-
-        <dialog
-            id="success-dialog"
-            aria-labelledby="success-title"
-            aria-describedby="success-message"
-            class="fixed inset-0 m-auto max-h-[calc(100vh-2rem)] w-[min(90%,32rem)] overflow-y-auto rounded-2xl border-0 bg-white p-6 text-[#111827] shadow-2xl backdrop:bg-black/60 sm:p-8"
-        >
-            <h2 id="success-title" class="mb-3 text-2xl font-bold">Форму успішно перевірено</h2>
-            <p id="success-message" class="mb-6 text-[#60718c]">
-                Усі обов’язкові поля пройшли клієнтську валідацію. Дякуємо!
-            </p>
-            <button
-                id="close-success-dialog"
-                class="min-h-[44px] rounded-xl bg-[#03a9fc] px-5 py-2.5 font-semibold text-[#06243a] hover:bg-[#00a0ed] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0077b6] focus-visible:ring-offset-2"
-                type="button"
-                autofocus
-            >
-                Закрити
-            </button>
-        </dialog>
 
         <!-- Підвал сайту: короткий опис, соцмережі, контакти та юридична інформація. -->
         <footer class="bg-[#fbfcfe] border-t border-[#e8edf3] py-12 font-['Lato',sans-serif]">

@@ -234,6 +234,10 @@ closeSuccessDialogButton.addEventListener("click", () => {
     successDialog.close();
 });
 
+successDialog.addEventListener("click", (event) => {
+    if (event.target === event.currentTarget) successDialog.close();
+});
+
 successDialog.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
         event.preventDefault();
