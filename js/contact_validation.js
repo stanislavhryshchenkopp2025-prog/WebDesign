@@ -1,10 +1,11 @@
-const phoneRegex = /^\+380\d{9}$/;
+﻿const phoneRegex = /^\+380\d{9}$/;
 
 const contactForm = document.querySelector("#contact-form");
 const nameInput = document.querySelector("#name");
 const phoneInput = document.querySelector("#phone");
 const currentScoreInput = document.querySelector("#contact-current-score");
 const targetScoreInput = document.querySelector("#contact-target-score");
+const durationInput = document.querySelector("#contact-duration");
 const consentCheckbox = document.querySelector("#personal-data-consent");
 const successDialog = document.querySelector("#success-dialog");
 const closeSuccessDialogButton = document.querySelector("#close-success-dialog");
@@ -111,6 +112,17 @@ function validateTargetScore() {
     return true;
 }
 
+function validateDuration() {
+    const duration = durationInput.valueAsNumber;
+    if (!Number.isInteger(duration) || duration === 0) {
+        showError(durationInput, "Мінімальна тривалість навчання — 1 місяць.");
+        return false;
+    }
+
+    showSuccess(durationInput);
+    return true;
+}
+
 function validateCkeckbox() {
     const errorId = `${consentCheckbox.id}-error`;
     let errorMessage = document.getElementById(errorId);
@@ -152,11 +164,15 @@ phoneInput.addEventListener("input", () => {
 const leaveOnlyDigits = (input) => input.value = input.value.replace(/\D/g, "");
 currentScoreInput.addEventListener("input", () => leaveOnlyDigits(currentScoreInput));
 targetScoreInput.addEventListener("input", () => leaveOnlyDigits(targetScoreInput));
+durationInput.addEventListener("input", () => {
+    durationInput.value = durationInput.value.replace(/\D/g, "").slice(0, 1);
+});
 
 let nameTouched = false;
 let phoneTouched = false;
 let currentScoreTouched = false;
 let targetScoreTouched = false;
+let durationTouched = false;
 let consentTouched = false;
 
 consentCheckbox.addEventListener("change", () => {
@@ -164,8 +180,10 @@ consentCheckbox.addEventListener("change", () => {
 });
 
 nameInput.addEventListener("blur", () => {
-    nameTouched = true;
-    validateName();
+    if (nameInput.value !== "") {
+        nameTouched = true;
+        validateName();
+    }
 });
 nameInput.addEventListener("input", () => {
     if (nameTouched) validateName();
@@ -195,13 +213,22 @@ targetScoreInput.addEventListener("blur", () => {
 currentScoreInput.addEventListener("input", validateScoresIfTouched);
 targetScoreInput.addEventListener("input", validateScoresIfTouched);
 
+durationInput.addEventListener("blur", () => {
+    durationTouched = true;
+    validateDuration();
+});
+durationInput.addEventListener("input", () => {
+    if (durationTouched) validateDuration();
+});
+
 function resetContactForm() {
     contactForm.reset();
-    [nameInput, phoneInput, currentScoreInput, targetScoreInput].forEach(clearFieldState);
+    [nameInput, phoneInput, currentScoreInput, targetScoreInput, durationInput].forEach(clearFieldState);
     nameTouched = false;
     phoneTouched = false;
     currentScoreTouched = false;
     targetScoreTouched = false;
+    durationTouched = false;
     consentTouched = false;
 }
 
@@ -210,6 +237,7 @@ contactForm.addEventListener("submit", (event) => {
     phoneTouched = true;
     currentScoreTouched = true;
     targetScoreTouched = true;
+    durationTouched = true;
     consentTouched = true;
 
     const validationResults = [
@@ -217,6 +245,7 @@ contactForm.addEventListener("submit", (event) => {
         validatePhone(),
         validateCurrentScore(),
         validateTargetScore(),
+        validateDuration(),
         validateCkeckbox()
     ];
 
